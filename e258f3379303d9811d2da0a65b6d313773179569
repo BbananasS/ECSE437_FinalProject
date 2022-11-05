@@ -51,6 +51,23 @@
       "parentUuid": "02c9e7d3_5d2d9c8d",
       "revId": "e258f3379303d9811d2da0a65b6d313773179569",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34220e05_1c3f4d46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1020518
+      },
+      "writtenOn": "2022-11-05T21:35:38Z",
+      "side": 1,
+      "message": "Thank you for taking the time to review! I\u0027ll merge the changes now.",
+      "revId": "e258f3379303d9811d2da0a65b6d313773179569",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
