@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 
-const Todo = ({title}) => {
+const Todo = ({title, completed, removeTodoItemProp}) => {
     const [isEditing, setIsEditing] = useState(false)
     const [value, setValue] = useState(title)
     const [tempValue, setTempValue] = useState(title)
-    const [completed, setCompleted] = useState(false)
+    const [completedState, setCompleted] = useState(completed)
 
     const handleDivDoubleClick = () => {
     setIsEditing(true)
@@ -27,11 +27,11 @@ const Todo = ({title}) => {
     }
 
     const handleButtonClick = () => {
-        setCompleted(true)
+        setCompleted((oldCompleted) => !oldCompleted)
     }
 
     return (
-        <div className="row" onDoubleClick={handleDivDoubleClick}>
+        <div className="row">
             {
             isEditing ? 
                 <div className="column seven wide">
@@ -45,20 +45,24 @@ const Todo = ({title}) => {
                     </div>
                 </div> :
                 <>
-                    <div className="column five wide">
-                        <h2 className={"ui header" + (completed ? " green" : "")}>{value}</h2>
+                    <div className="column five wide" onDoubleClick={handleDivDoubleClick}>
+                        <h2 className={"ui header" + (completedState ? " green" : "")}>{value}</h2>
                     </div>
 
                     <div className="column one wide">
                         <button 
-                            className="ui button circular icon green"
+                            className={"ui button circular icon" + (completedState ? " blue" : " green")}
                             onClick={handleButtonClick}
                         >
                             <i className="white check icon"></i></button>
                     </div>
 
                     <div className="column one wide">
-                        <button className="ui button circular icon red"><i className="white remove icon"></i></button>
+                        <button 
+                            onClick={removeTodoItemProp}
+                            className="ui button circular icon red"
+                        >
+                            <i className="white remove icon"></i></button>
                     </div>
                 </>
             }
