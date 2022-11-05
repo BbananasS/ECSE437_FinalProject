@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02c9e7d3_5d2d9c8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1020518
+      },
+      "writtenOn": "2022-11-05T21:26:07Z",
+      "side": 1,
+      "message": "Hey Yuta! I implemented the first version of the frontend layout. Not all features are working properly yet. Can you please review and let me know what you think?!",
+      "revId": "e258f3379303d9811d2da0a65b6d313773179569",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
