@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5f30974_3f5d706e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1020518
+      },
+      "writtenOn": "2022-11-05T22:47:33Z",
+      "side": 1,
+      "message": "Hey Yuta! I finished the frontend design and overall functionality. The next step is to connect it to the backend. Please let me know what you think!",
+      "revId": "2490d8c9c64768f02a11269d515370fedc6701ab",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
