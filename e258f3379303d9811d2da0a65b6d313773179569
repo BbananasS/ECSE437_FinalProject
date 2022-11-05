@@ -16,6 +16,41 @@
       "message": "Hey Yuta! I implemented the first version of the frontend layout. Not all features are working properly yet. Can you please review and let me know what you think?!",
       "revId": "e258f3379303d9811d2da0a65b6d313773179569",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26c56072_c49710fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019484
+      },
+      "writtenOn": "2022-11-05T21:34:12Z",
+      "side": 1,
+      "message": "I just reviewed it! Everything seems good to me! I am satisfied on the preliminary version of the frontend. ",
+      "revId": "e258f3379303d9811d2da0a65b6d313773179569",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6632b77_815db61e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019484
+      },
+      "writtenOn": "2022-11-05T21:34:12Z",
+      "side": 1,
+      "message": "Perfect great! I will be reviewing it shortly!",
+      "parentUuid": "02c9e7d3_5d2d9c8d",
+      "revId": "e258f3379303d9811d2da0a65b6d313773179569",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
