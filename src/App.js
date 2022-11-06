@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import Form from "./components/Form"
 import Section from "./components/Section"
@@ -14,6 +15,14 @@ const list = [
 
 const App = () => {
     const [todoList, setTodoList] = useState(list)
+
+    useEffect(() => {
+        async function fetchData() {
+        const response = await axios.get("http://localhost:3030/todos/");
+        console.log(response)
+    }
+        fetchData()
+    }, []);
 
     const addTodo = (item) => {
         setTodoList((oldList) => [...oldList, item])
