@@ -4,7 +4,6 @@ import todos from "./api";
 import Form from "./components/Form"
 import Section from "./components/Section"
 import List from "./components/List"
-import axios from "axios";
 
 const appTitle = "To-Do App"
 
