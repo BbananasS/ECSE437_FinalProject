@@ -24,12 +24,12 @@ const Form = ({ addTodo }) => {
                             value={inputValue}
                             onChange={handleInputChange}
                             type="text" 
-                            placeholder="Enter something to do..." 
+                            placeholder="Enter a task" 
                         />
                     </div>
 
                     <div className="column one wide">
-                        <button type="submit" className="ui button circular icon green"><i className="white plus icon"></i></button>
+                        <button type="submit" className="ui button circular icon 25251E"><i className="white plus icon"></i></button>
                     </div>
                         
                 </div>
