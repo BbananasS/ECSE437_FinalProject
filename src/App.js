@@ -39,7 +39,7 @@ const App = () => {
 
     return <div className="main">
         
-                <Section>
+                <Section className={style.main}>
                     <h1>{appTitle}</h1>
                 </Section>
 
