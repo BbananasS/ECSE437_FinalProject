@@ -4,11 +4,13 @@ import todos from "./api";
 import Form from "./components/Form"
 import Section from "./components/Section"
 import List from "./components/List"
+import style from "./app.css"
 
-const appTitle = "To-Do App"
+const appTitle = "Things to be done TODAY!"
 
 
 const App = () => {
+    document.body.style.backgroundColor = "#BEBDB2";
     const [todoList, setTodoList] = useState([])
 
     useEffect(() => {
@@ -33,9 +35,16 @@ const App = () => {
         await todos.put("/todos/" + id, item)
     };
 
-    return <div className="ui container center aligned">
-                <Section>
+    const currDate = new Date().toLocaleDateString();
+
+    return <div className="main">
+        
+                <Section className={style.main}>
                     <h1>{appTitle}</h1>
+                </Section>
+
+                <Section>
+                    <h3>{currDate}</h3>
                 </Section>
                 
                 <Section>
@@ -47,6 +56,9 @@ const App = () => {
                     editTodoListProp={editTodo}
                     removeTodoListProp={removeTodo} list={todoList}/>
                 </Section>
+
+                
+            
             </div>
 }
 
