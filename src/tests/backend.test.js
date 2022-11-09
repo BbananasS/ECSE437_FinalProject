@@ -1,8 +1,9 @@
-import Todo from "../components/Todo"
-
+global.TextEncoder = require("util").TextEncoder;
+global.TextDecoder = require("util").TextDecoder;
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+var db;
 describe('Todo CRUD',() => {
     let connection;
     let database;
