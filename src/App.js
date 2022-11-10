@@ -15,14 +15,14 @@ const App = () => {
 
     useEffect(() => {
         async function fetchData() {
-        const { data } = await todos.get("/todos/");
-        setTodoList(data);
-    }
+            const { data } = await todos.get("/todos/");
+            setTodoList(data);
+        }
         fetchData()
     }, []);
 
     const addTodo = async (item) => {
-        const {data} = await todos.post("/todos/", item);
+        const { data } = await todos.post("/todos/", item);
         setTodoList((oldList) => [...oldList, data])
     }
 
@@ -31,35 +31,35 @@ const App = () => {
         setTodoList((oldList) => oldList.filter((item) => item._id !== id))
     }
 
-    const editTodo = async (id,item) => {
+    const editTodo = async (id, item) => {
         await todos.put("/todos/" + id, item)
     };
 
     const currDate = new Date().toLocaleDateString();
 
     return <div className="main">
-        
-                <Section className={style.main}>
-                    <h1>{appTitle}</h1>
-                </Section>
 
-                <Section>
-                    <h3>{currDate}</h3>
-                </Section>
-                
-                <Section>
-                    <Form addTodo={addTodo}/>
-                </Section>
+        <Section className={style.main}>
+            <h1>{appTitle}</h1>
+        </Section>
 
-                <Section>
-                    <List 
-                    editTodoListProp={editTodo}
-                    removeTodoListProp={removeTodo} list={todoList}/>
-                </Section>
+        <Section>
+            <h3>{currDate}</h3>
+        </Section>
 
-                
-            
-            </div>
+        <Section>
+            <Form addTodo={addTodo} />
+        </Section>
+
+        <Section>
+            <List
+                editTodoListProp={editTodo}
+                removeTodoListProp={removeTodo} list={todoList} />
+        </Section>
+
+
+
+    </div>
 }
 
 export default App;
