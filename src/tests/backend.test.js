@@ -1,75 +1,20 @@
-global.TextEncoder = require("util").TextEncoder;
-global.TextDecoder = require("util").TextDecoder;
-const mongoose = require('mongoose');
-require('dotenv').config();
+import Fizz_Buzz from '../components/Fizz_Buzz';
 
-var db;
-describe('Todo CRUD',() => {
-    let connection;
-    let database;
-    const todos = mongoose.model("test_"+process.env.COLLECTION,mongoose.Schema({
-        title: String,
-        completed: Boolean
-    }));
+describe("FizzBuzz", () => {
+   test('[3] should result in "fizz"', () => {
+     expect(Fizz_Buzz([3])).toBe('fizz');
+   });
 
-    beforeAll(async () => {
-       
-        connection = await mongoose.connect('mongodb://localhost:27017/test_'+process.env.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true });
-        db = mongoose.connection;
-        const collection = process.env.COLLECTION;
-        await db.createCollection(collection);
+   test('[5] should result in "buzz"', () => {
+     expect(Fizz_Buzz([5])).toBe('buzz');
+   });
 
-    });
+   test('[15] should result in "fizzbuzz"', () => {
+     expect(Fizz_Buzz([15])).toBe('fizzbuzz');
+   });
 
-    afterAll(async () => {
-
-        const collection = "test_"+process.env.COLLECTION;
-        await db.dropCollection(collection);
-        await db.dropDatabase();
-        await db.close();
-        await connection.close();
-
-    });
-
-    
-    test("Add Todo POST /todos",async () => {
-
-        const response = await todos.create({
-            title: process.env.TODO_TITLE,
-            completed: process.env.TODO_COMPLETED
-        });
-        await response.save();
-        expect(response.title).toBe(process.env.TODO_TITLE);
-
-    });
-
-    test("All Todos GET /todos", async () => {
-
-        const response = await todos.find({});
-        expect(response.length).toBeGreaterThan(0);
-
-    });
-
-    test("Update Todo PUT /todo/:id", async () => {
-      
-        const response = await todos.updateOne({title: process.env.TODO_TITLE_ALT},{completed: process.env.TODO_COMPLETED});
-        expect(response.ok).toBeTruthy();
-
-    });
-
-    // test("Todo update is correct", async () => {
-
-    //     const responseTwo = await todos.findOne({todo: process.env.TODO_TITLE});
-    //     expect(responseTwo.email).toBe(process.env.CUSTOMER_EMAIL_ALT);
-
-    // });
-
-    test("Delete Todo DELETE /todos/:id", async() => {
-        
-        const response = await todos.deleteOne({name: process.env.TODO_TITLE});
-        expect(response.ok).toBe(1);
-      
-
-    });
+   test('[1,2,3] should result in "1, 2, fizz"', () => {
+     expect(Fizz_Buzz([3])).toBe('fizz');
+   });
 
 });
