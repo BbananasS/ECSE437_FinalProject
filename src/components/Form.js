@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Form = ({ addTodo }) => {
+const Form = ({ addTodo }) => {  // eslint-disable-line
     const [inputValue, setInputValue] = useState("")
 
     const handleInputChange = (e) => {
@@ -11,7 +11,7 @@ const Form = ({ addTodo }) => {
         e.preventDefault()
 
         if(inputValue.trim() === "") return
-        addTodo({ title: inputValue, completed: false })
+        addTodo({ title: inputValue, completed: false })  // eslint-disable-line
         setInputValue("")
     }
     

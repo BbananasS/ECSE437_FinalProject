@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Todo = ({title, completed, removeTodoItemProp, editTodoItemProp}) => {
+const Todo = ({title, completed, removeTodoItemProp, editTodoItemProp}) => {  // eslint-disable-line
     const [isEditing, setIsEditing] = useState(false)
     const [value, setValue] = useState(title)
     const [tempValue, setTempValue] = useState(title)
@@ -75,5 +75,7 @@ const Todo = ({title, completed, removeTodoItemProp, editTodoItemProp}) => {
         
     )
 }
+
+//testing purpose
 
 export default Todo

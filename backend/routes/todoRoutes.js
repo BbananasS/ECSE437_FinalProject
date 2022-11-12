@@ -26,7 +26,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-    Todo.findOneAndRemove({_id: req.params.id}, (err, result) =>{
+    Todo.findOneAndRemove({_id: req.params.id}, (err) =>{
         if(err) throw new Error(err);
         res.end()}
     );
