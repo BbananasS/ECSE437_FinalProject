@@ -22,7 +22,7 @@ const Todo = ({title, completed, removeTodoItemProp, editTodoItemProp}) => {  //
             setIsEditing(false)
         }
     }
-
+//
     const handleInputOnChange = (e) => {
         setTempValue(e.target.value)
     }
